@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+                theme: {
+                    purple: '#8B5CF6',
+                    darkPurple: '#7E69AB',
+                    lightPurple: '#D6BCFA',
+                    orange: '#F97316',
+                    blue: '#0EA5E9',
+                    dark: '#1A1F2C',
+                    light: '#F6F7FA',
+                },
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +94,26 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+                'float': {
+                    '0%, 100%': { transform: 'translateY(0)' },
+                    '50%': { transform: 'translateY(-10px)' },
+                },
+                'pulse-light': {
+                    '0%, 100%': { opacity: '1' },
+                    '50%': { opacity: '0.8' },
+                },
+                'spin-slow': {
+                    '0%': { transform: 'rotate(0deg)' },
+                    '100%': { transform: 'rotate(360deg)' },
+                }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+                'float': 'float 5s ease-in-out infinite',
+                'pulse-light': 'pulse-light 3s ease-in-out infinite',
+                'spin-slow': 'spin-slow 8s linear infinite',
 			}
 		}
 	},
