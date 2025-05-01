@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ConnectWalletButton from "../shared/ConnectWalletButton";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Info } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -69,6 +69,13 @@ const Navbar = () => {
             Leaderboard
           </Link>
           <Link
+            to="/about"
+            className="text-foreground hover:text-theme-purple transition-colors flex items-center"
+          >
+            <Info className="h-4 w-4 mr-1" />
+            About
+          </Link>
+          <Link
             to="/me"
             className="text-foreground hover:text-theme-purple transition-colors"
           >
@@ -121,6 +128,14 @@ const Navbar = () => {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Leaderboard
+            </Link>
+            <Link
+              to="/about"
+              className="text-foreground hover:text-theme-purple transition-colors py-2 flex items-center"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <Info className="h-4 w-4 mr-1" />
+              About
             </Link>
             <Link
               to="/me"

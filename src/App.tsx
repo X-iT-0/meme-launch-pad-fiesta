@@ -11,6 +11,7 @@ import Submit from "./pages/Submit";
 import Leaderboard from "./pages/Leaderboard";
 import Profile from "./pages/Profile";
 import NotFound from "./pages/NotFound";
+import About from "./pages/About";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/submit" element={<Submit />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
           <Route path="/me" element={<Profile />} />
+          <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
